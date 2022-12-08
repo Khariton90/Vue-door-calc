@@ -1,0 +1,56 @@
+.services {
+  padding: 24px;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  flex: 1;
+  min-width: 400px;
+}
+
+.services__title {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.list {
+  list-style-type: none;
+
+  & li {
+    padding: 11px 0;
+    flex: 1;
+    border-bottom: 1px solid #D2D2D2;
+
+    & p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;  
+    }
+
+    & input {
+      flex: 1;
+      width: 100%;
+      padding: 8px;
+      border-radius: $fields-radius;
+      border: none;
+      background-color: #EEEEEE;
+      margin-top: 6px;
+    }
+  }
+}
+
+.result {
+  margin-top: 49px;
+  color: #000000;
+  border-top: 1px solid #9D9D9D;
+  padding-top: 24px;
+  & p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 20px;
+  }
+}
+
+select:focus {
+  outline: none;
+}

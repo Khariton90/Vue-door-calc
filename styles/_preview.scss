@@ -1,0 +1,62 @@
+.preview {
+  flex: 1;
+  background-color: $color-blue;
+  color: $color-white;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  max-width: 602px;
+}
+
+.preview__wrapper {
+  padding: 37px 24px;
+}
+
+.preview__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  & label {
+    text-align: center;
+  }
+
+  & p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  & input {
+    max-width: 80px;
+    background-color: $color-white;
+    border: none;
+    padding: 5px;
+    border-radius: $fields-radius;
+    margin-top: 4px;
+    color: #000000;
+    text-align: center;
+  }
+}
+
+.preview__title {
+  padding-bottom: 30px;
+
+}
+
+.picture {
+  & img {
+    max-width: 240px;
+  }
+}
+
+.preview__door {
+  & .preview__title {
+    margin-top: 40px;
+  }
+}
+
+.list li input.success {
+  background-color: $color-blue;
+  color: $color-white
+}
