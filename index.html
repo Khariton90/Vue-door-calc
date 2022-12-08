@@ -96,9 +96,16 @@
               <li>
                 <label for="">
                   <p>Установка двери</p>
+                  <select name="" id="" class="material">
+                    <option value="">Установка межкомнатной двери</option>
+                    <option value="">Установка межкомнатной двери с частично предустановленной фурнитурой (замок)</option>
+                    <option value="">Установка двухстворчатой межкомнатной двери</option>
+                    <option value="">Установка дверей из массива</option>
+                    <option value="">Установка эмалированных дверей</option>
+                  </select>
                 </label>
               </li>
-              <li :class="{success: getSideExtention}">
+              <li v-if="getSideExtention" :class="{success: getSideExtention}">
                 <label for="">
                   <p>Расширение проема сбоку
                     <span v-if="getSideExtention">(2 м/п)</span>
@@ -108,7 +115,7 @@
                   :class="{success: getSideExtention}">
                 </label>
               </li>
-              <li :class="{success: getTopExtention}">
+              <li  v-if="getTopExtention" :class="{success: getTopExtention}">
                 <label for="">
                   <p>Расширение проема сверху
                     <span v-if="getTopExtention">(1 м/п)</span>
@@ -120,7 +127,7 @@
                   :class="{success: getTopExtention}">
                 </label>
               </li>
-              <li :class="{success: getSideNarrow}">
+              <li v-if="getSideNarrow" :class="{success: getSideNarrow}">
                 <label for="">
                   <p>Уменьшение проема сбоку
                     <span v-if="getSideNarrow">(2 м/п)</span>
@@ -130,7 +137,7 @@
                   :class="{success: getSideNarrow}">
                 </label>
               </li>
-              <li :class="{success: getTopNarrow}">
+              <li v-if="getTopNarrow" :class="{success: getTopNarrow}">
                 <label for="">
                   <p>Уменьшение проема сверху
                     <span v-if="getTopNarrow">(1 м/п)</span>
@@ -140,7 +147,7 @@
                   :class="{success: getTopNarrow}">
                 </label>
               </li>
-              <li :class="{success: getJambRepair}">
+              <li  v-if="getJambCount && getJambRepair" :class="{success: getJambRepair}">
                 <label for="">
                   <p>Монтаж комплекта доборов <span v-if="getJambCount && getJambRepair">({{ getJambCount }} компл.)</span></p>
                   <input type="text" readonly disabled 
@@ -150,7 +157,7 @@
                   
                 </label>
               </li>
-              <li :class="{success: getCuttJamb}">
+              <li v-if="getCuttJamb" :class="{success: getCuttJamb}">
                 <label for="">
                   <p>Распил доборов
                     <span v-if="getCuttJamb">(3 шт.)</span>
@@ -163,7 +170,8 @@
             </ul>
 
             <div class="services__result result">
-              <p>Итого:</p>
+              <!-- <p>Итого:</p> -->
+              <a href="" class="print-btn" @click.prevent="print">Печать</a>
             </div>
           </div>
         </div>

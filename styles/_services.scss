@@ -5,6 +5,9 @@
   box-shadow: $shadow;
   flex: 1;
   min-width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .services__title {
@@ -15,7 +18,7 @@
 
 .list {
   list-style-type: none;
-
+  flex: 1;
   & li {
     padding: 11px 0;
     flex: 1;
@@ -43,7 +46,8 @@
   margin-top: 49px;
   color: #000000;
   border-top: 1px solid #9D9D9D;
-  padding-top: 24px;
+  padding: 24px 0 10px;
+  flex: 0 0 auto;
   & p {
     font-weight: 500;
     font-size: 24px;

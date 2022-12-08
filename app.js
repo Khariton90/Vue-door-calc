@@ -26,6 +26,11 @@ const app = new Vue({
     jamb: JAMB.DEFAULT,
     planc: ''
   },
+  methods: {
+    print() {
+      window.print();
+    }
+  },
   computed: {
     getWidthValid() {
       if (!this.$v.form.door.width.$invalid && !this.$v.form.doorone.width.$invalid) {
